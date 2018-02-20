@@ -1,0 +1,21 @@
+# Install Pip
+sudo apt-get install -y python-pip
+
+# Install AWS CLI tol globally
+sudo pip install awscli
+
+# Check to ensure it exists
+which aws
+
+# Configure AWS - adding the id, key, default zone and default output format
+aws configure
+> YOUR KEY HERE
+> YOUR SECRET KEY HERE
+> us-east-1
+> json
+
+
+#ADD BASH SCRIPT TO /ETC/CRON.(DAILY,WEEKLY,MONTHLY)
+
+#! /bin/bash
+aws s3 sync --delete /PATH/TO/BACKUP/ s3://BUCKET-NAME

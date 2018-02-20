@@ -1,0 +1,16 @@
+Install NGINX from repository
+
+sudo wget http://nginx.org/keys/nginx_signing.key
+sudo apt-key add nginx_signing.key
+
+sudo vi /etc/apt/sources.list
+
+deb http://nginx.org/packages/mainline/ubuntu/ codename nginx
+deb-src http://nginx.org/packages/mainline/ubuntu/ codename nginx
+
+codename is a codename of an Ubuntu release.
+
+sudo apt-get update
+
+sudo apt-cache madison nginx
+sudo apt install nginx
