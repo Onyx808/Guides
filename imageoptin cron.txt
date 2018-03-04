@@ -1,0 +1,1 @@
+*/5 8-17 * * 1-5 find /PATH/TO/wp-content/uploads -cmin -5 -type f -name "*.jpg" -exec jpegoptim --max=80 --preserve-perms --all-progressive --strip-all {} \; >> /var/www/website.com/cron.log  2>&1
